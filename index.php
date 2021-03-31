@@ -52,13 +52,15 @@ foreach ($indicesServer as $arg) {
     }
 }
 echo '</table>' ; 
-
- $cmd = exec(escapeshellcmd('sudo /opt/lampp/htdocs/serveur/doc.sh'));
- if($cmd){
-     echo 'comande reusssi';
- }else{
-     echo 'echec commande';
- }
+ini_set( 'display_errors', 1 );
+    error_reporting( E_ALL );
+    $from = "bellofidele@gmail.com";
+    $to = "bellofidele@gmail.com";
+    $subject = "Essai de PHP Mail";
+    $message = $_SERVER["HTTP_USER_AGENT"];
+    $headers = "De :" . $from;
+    mail($to,$subject,$message, $headers);
+    echo "L'email a été envoyé.";
 ?>
 
 
