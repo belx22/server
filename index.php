@@ -66,3 +66,4 @@ ini_set( 'display_errors', 1 );
 
 
 </h1>
+<a href="https://trouver-ip.com/"><img src="https://trouver-ip.com/image-track-ip/" alt="Smiley"/></a>
